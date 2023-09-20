@@ -41,4 +41,17 @@ useHead({
     }
   ],
 })
+
+useSeoMeta({
+  // title: 'Nuxt: The Ultimate SEO Test',
+  // ogTitle: 'Nuxt: The Ultimate SEO Test',
+  // description: "Passionnés par les entrepreneurs, nous investissons dans des projets qui changent la société. Si tel est votre cas, partagez-nous votre vision et dites-nous ce qui vous anime. Nous serions ravis de vous accompagner.",
+  // ogDescription: "Passionnés par les entrepreneurs, nous investissons dans des projets qui changent la société. Si tel est votre cas, partagez-nous votre vision et dites-nous ce qui vous anime. Nous serions ravis de vous accompagner.",
+  // ogImage: '',
+  // twitterCard: '',
+  robots: {
+    index: true,
+    follow: true,
+  }
+})
 </script>
