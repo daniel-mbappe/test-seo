@@ -28,6 +28,10 @@ useHead({
       name: 'description',
       content: 'Build your next SEO Vue.js application with confidence using Nuxt 3....' 
     },
+    {
+      name: 'google-site-verification',
+      content: 'EQsvJzHHiOYUjjBQPp99Okpz61pH3ozPfxsrNu4IpfU' 
+    },
   ],
   link: [
     {
