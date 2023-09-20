@@ -17,6 +17,16 @@ const itemId = route.params.id
 const productDetails = await fetch(`https://dummyjson.com/products/${itemId}`).then(res => res.json()).then(data => data);
 const title = `${productDetails.title} | ${productDetails.description}`;
 
+useHead({
+  title: title,
+  meta: [
+    {
+      name: 'description',
+      content: productDetails.description
+    },
+  ],
+})
+
 useServerSeoMeta({
   ogTitle: () => title,
   title: () => title,
