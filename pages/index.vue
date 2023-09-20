@@ -26,7 +26,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Build your next SEO Vue.js application with confidence using Nuxt....' 
+      content: 'Build your next SEO Vue.js application with confidence using Nuxt 3....' 
     },
   ],
 })
