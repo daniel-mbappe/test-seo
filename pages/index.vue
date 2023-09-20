@@ -20,4 +20,14 @@
 const data = await fetch('https://dummyjson.com/products')
   .then(res => res.json())
   .then(data => data.products)
+
+useHead({
+  title: 'Nuxt: The Ultimate SEO Test',
+  meta: [
+    {
+      name: 'description',
+      content: 'Build your next SEO Vue.js application with confidence using Nuxt....' 
+    },
+  ],
+})
 </script>
