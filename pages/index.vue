@@ -1,13 +1,16 @@
 <template>
-  <div>
-    <div class="productContainer">
-      <div class="product" v-for="(product, i) in data" :key="i">
+  <div class="flex flex-col p-4">
+    <div class="grid grid-cols-8 gap-2">
+      <div v-for="(product, i) in data" :key="i">
         <RouterLink :to="`/catalog/becos_article_${product.id}`">
-          <div>
-            {{  product.title  }}
+          <div class="flex flex-col border border-black rounded-[8px] p-2 gap-4">
+            <p class="text-xl">
+              {{ product.title }}
+            </p>
+
+            <p class="text-xs">{{ product.description }}</p>
           </div>
         </RouterLink>
-        <div>{{ product.description }}</div>
       </div>
     </div>
   </div>
