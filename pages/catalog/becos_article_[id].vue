@@ -11,9 +11,11 @@
 </template>
 
 <script setup>
+const { path } = useRoute()
 const route = useRoute();
 const itemId = route.params.id
-
+const baseUrl = 'https://test-seo-ten.vercel.app/catalog/';
+const canonicalPath = baseUrl + (path + '/').replace(/\/+$/, '/');
 const productDetails = await fetch(`https://dummyjson.com/products/${itemId}`).then(res => res.json()).then(data => data);
 const title = `${productDetails.title} | ${productDetails.description}`;
 
@@ -25,18 +27,12 @@ useHead({
       content: productDetails.description
     },
   ],
-})
-
-useServerSeoMeta({
-  ogTitle: () => title,
-  title: () => title,
-  description: () => productDetails.description,
-  ogDescription: () => productDetails.description,
-  ogImage: () => productDetails.thumbnail,
-  ogImageUrl: () => productDetails.thumbnail,
-  twitterCard: () => 'summary_large_image',
-  twitterTitle: () => title,
-  twitterDescription: () => productDetails.description,
-  twitterImage: () => productDetails.thumbnail
+  link: [
+    {
+      hid: 'canonical',
+      rel: 'canonical',
+      href: canonicalPath
+    }
+  ],
 })
 </script>
