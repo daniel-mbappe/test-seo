@@ -14,7 +14,7 @@
 const { path } = useRoute()
 const route = useRoute();
 const itemId = route.params.id
-const baseUrl = 'https://test-seo-ten.vercel.app/catalog/';
+const baseUrl = 'https://test-seo-ten.vercel.app';
 const canonicalPath = baseUrl + (path + '/').replace(/\/+$/, '/');
 const productDetails = await fetch(`https://dummyjson.com/products/${itemId}`).then(res => res.json()).then(data => data);
 const title = `${productDetails.title} | ${productDetails.description}`;
