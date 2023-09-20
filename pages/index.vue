@@ -29,5 +29,12 @@ useHead({
       content: 'Build your next SEO Vue.js application with confidence using Nuxt 3....' 
     },
   ],
+  link: [
+    {
+      hid: 'canonical',
+      rel: 'canonical',
+      href: 'https://test-seo-ten.vercel.app',
+    }
+  ],
 })
 </script>
